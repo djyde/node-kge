@@ -7,6 +7,22 @@ const http = axios.create({
 
 global.window = global.window || {}
 
+exports.getUserInfo = (share_uid) => {
+  return http.get('/node/personal', {
+    params: {
+      g_f: 'old_pc',
+      uid: share_uid
+    }
+  })
+  .then(res => {
+    applyWindowData(res.data)
+
+    const info = window.__DATA__.data
+
+    return info
+  })
+}
+
 exports.getPlayList = (share_uid, start = 1, num = 8) => http.get('/cgi/kg_ugc_get_homepage', {
   params: {
     start,
@@ -32,17 +48,19 @@ exports.getPlayUrl = (share_id) => {
     }
   })
   .then(res => {
-    const htmlText = res.data
-    const $ = cheerio.load(htmlText)
-
-    $('script').map(function(i, el) {
-      const scriptText = $(el).text()
-      if (scriptText.match('window.__DATA__')) {
-        eval(scriptText)
-      }
-    })
-
+    applyWindowData(res.data)
     const playurl = global.window.__DATA__.detail.playurl
     return playurl
+  })
+}
+
+function applyWindowData (htmlText) {
+  const $ = cheerio.load(htmlText)
+
+  $('script').map(function (i, el) {
+    const scriptText = $(el).text()
+    if (scriptText.match('window.__DATA__')) {
+      eval(scriptText)
+    }
   })
 }

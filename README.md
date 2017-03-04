@@ -14,6 +14,8 @@ $ npm install kge
 
 ## API
 
+### getUserInfo(share_uid: string): object
+
 ### getPlayList(share_uid: string, start_num: number, page_size: number): AxiosPromise
 
 ### getLyrics(ksongmid: string): AxiosPromise

@@ -1,6 +1,6 @@
 const assert = require('power-assert')
 
-const { getPlayList, getLyrics, getPlayUrl } = require('../index')
+const { getPlayList, getLyrics, getPlayUrl, getUserInfo } = require('../index')
 
 const SHARE_UID = '639c958d222c308e3c'
 const SHARE_ID = 'BJvnYrB0jNxUpBpT'
@@ -8,6 +8,23 @@ const SONG_MID = '002gVjL13AvaO9'
 const TIMEOUT = 10000
 
 describe('node-kge', () => {
+
+  describe('#getUserInfo', () => {
+    it('should get user info', done => {
+      getUserInfo(SHARE_UID)
+        .then(info => {
+          assert(info.age)
+          assert(info.nickname)
+          assert(info.head_img_url)
+          assert(info.ugc_total_count)
+          done()
+        })
+        .catch(e => {
+          done(e)
+        })
+    }).timeout(TIMEOUT)
+  })
+
   describe('#getPlayList', () => {
     it('should get play list', done => {
       getPlayList(SHARE_UID, 1, 5)
