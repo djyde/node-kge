@@ -5,7 +5,7 @@ const http = axios.create({
   baseURL: 'http://kg.qq.com'
 })
 
-export const getPlayList = (share_uid, start = 1, num = 8) => http.get('/cgi/kg_ugc_get_homepage', {
+exports.getPlayList = (share_uid, start = 1, num = 8) => http.get('/cgi/kg_ugc_get_homepage', {
   params: {
     start,
     num,
@@ -15,9 +15,10 @@ export const getPlayList = (share_uid, start = 1, num = 8) => http.get('/cgi/kg_
   }
 })
 
-export const getLyrics = (songmid) => http.get('/cgi/fcg_lyric', {
+exports.getLyrics = (ksongmid) => http.get('/cgi/fcg_lyric', {
   params: {
-    songmid
+    ksongmid,
+    format: 'json'
   }
 })
 
