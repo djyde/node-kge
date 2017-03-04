@@ -1,5 +1,5 @@
 {
-  "name": "node-kge",
+  "name": "kge",
   "version": "0.0.0",
   "scripts": {
     "test": "mocha ./test"
@@ -11,5 +11,8 @@
   "devDependencies": {
     "mocha": "^3.2.0",
     "power-assert": "^1.4.2"
+  },
+  "engines": {
+    "node": ">=6.0"
   }
 }
