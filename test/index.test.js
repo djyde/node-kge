@@ -19,7 +19,7 @@ describe('node-kge', () => {
         .catch(e => {
           done(e)
         })
-    })
+    }).timeout(10000)
   })
 
   describe('#getLyrics', () => {
@@ -34,6 +34,6 @@ describe('node-kge', () => {
         .catch(e => {
           done(e)
         })
-    })
+    }).timeout(10000)
   })
 })
