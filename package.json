@@ -1,6 +1,6 @@
 {
   "name": "kge",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "scripts": {
     "test": "istanbul cover _mocha ./test --report lcovonly -- -R spec && codecov",
     "test:local": "istanbul cover _mocha ./test"

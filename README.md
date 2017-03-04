@@ -18,6 +18,8 @@ $ npm install kge
 
 ### getLyrics(ksongmid: string): AxiosPromise
 
+### getPlayUrl(share_id: string): string
+
 # License
 
 MIT License
