@@ -2,13 +2,15 @@
   "name": "kge",
   "version": "0.0.0",
   "scripts": {
-    "test": "istanbul cover _mocha ./test"
+    "test": "istanbul cover _mocha ./test --report lcovonly -- -R spec && codecov",
+    "test:local": "istanbul cover _mocha ./test"
   },
   "dependencies": {
     "axios": "^0.15.3",
     "cheerio": "^0.22.0"
   },
   "devDependencies": {
+    "codecov": "^1.0.1",
     "istanbul": "^0.4.5",
     "mocha": "^3.2.0",
     "power-assert": "^1.4.2"
