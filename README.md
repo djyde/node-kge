@@ -14,13 +14,13 @@ $ npm install kge
 
 ## API
 
-### getUserInfo(share_uid: string): object
+### getUserInfo(share_uid: string): Promise<object>
 
 ### getPlayList(share_uid: string, start_num: number, page_size: number): AxiosPromise
 
 ### getLyrics(ksongmid: string): AxiosPromise
 
-### getPlayUrl(share_id: string): string
+### getPlayUrl(share_id: string): Promise<string>
 
 # License
 
