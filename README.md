@@ -1,5 +1,7 @@
 # node-kge
 
+![](https://circleci.com/gh/djyde/node-kge.svg?style=shield)
+
 全民k歌 for Node.js
 
 ## Installation
