@@ -1,6 +1,8 @@
 # node-kge
 
-![](https://circleci.com/gh/djyde/node-kge.svg?style=shield)
+[![](https://circleci.com/gh/djyde/node-kge.svg?style=shield)](https://circleci.com/gh/djyde/node-kge)
+[![codecov](https://codecov.io/gh/djyde/node-kge/branch/master/graph/badge.svg)](https://codecov.io/gh/djyde/node-kge)
+
 
 全民k歌 for Node.js
 
