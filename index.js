@@ -23,6 +23,21 @@ exports.getUserInfo = (share_uid) => {
   })
 }
 
+exports.getSongInfo = (share_id) => {
+  return http.get('/node/play', {
+    params: {
+      s: share_id,
+      g_f: 'personal'
+    }
+  })
+  .then(res => {
+    applyWindowData(res.data)
+    const data = global.window.__DATA__
+    
+    return data
+  })
+}
+
 exports.getPlayList = (share_uid, start = 1, num = 8) => http.get('/cgi/kg_ugc_get_homepage', {
   params: {
     start,

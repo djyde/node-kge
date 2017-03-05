@@ -18,6 +18,8 @@ $ npm install kge
 
 - `getPlayList(share_uid: string, start_num: number, page_size: number): AxiosPromise`
 
+- `getSongInfo(share_id: string): Promise<object>`
+
 - `getLyrics(ksongmid: string): AxiosPromise`
 
 - `getPlayUrl(share_id: string): Promise<string>`
