@@ -1,6 +1,7 @@
 # node-kge
 
-[![](https://circleci.com/gh/djyde/node-kge.svg?style=shield)](https://circleci.com/gh/djyde/node-kge)
+[![npm](https://img.shields.io/npm/v/kge.svg)](https://github.com/djyde/node-kge)
+[![circleci](https://circleci.com/gh/djyde/node-kge.svg?style=shield)](https://circleci.com/gh/djyde/node-kge)
 [![codecov](https://codecov.io/gh/djyde/node-kge/branch/master/graph/badge.svg)](https://codecov.io/gh/djyde/node-kge)
 
 
